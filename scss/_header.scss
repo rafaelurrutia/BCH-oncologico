@@ -1,0 +1,260 @@
+header {
+    width: 100%;
+    background-color: $navbar-bg;
+    position: fixed;
+    z-index: 9999;
+    display: inline-block;
+    .menu1 {
+        width: 100%;
+        height: 20px;
+        background-color: $menu-1-bg;
+        ul {
+            float: right;
+            list-style: none;
+            li {
+                float: left;
+                padding: 3px 0px 0px 25px;
+                a {
+                    display: block;
+                    color: $menu-1-co;
+                    font-family: 'Roboto', sans-serif;
+                    font-size: 11px;
+                    font-weight: 400;
+                }
+            }
+        }
+        @media #{$mobile-y-tablet} {
+            display: none;
+        }
+    }
+    .menuprincipal {
+        width: 100%;
+        height: 60px;
+        background-color: $navbar-bg;
+        .menu-mobile {
+            display: none;
+        }
+        @media #{$mobile-y-tablet} {
+            //height: 60px;
+            background-color: $navbar-bg;
+            .menu-mobile {
+                display: block;
+                text-align: center;
+                width: 45px;
+                height: 45px;
+                cursor: pointer;
+                position: absolute;
+                top: 18px;
+                left: 5px;
+                z-index: 9999;
+            }
+        }
+        @media #{$mobile-y-tablet} {
+            .container {
+                width: 100%;
+                padding: 0px;
+                .col-md-12 {
+                    padding: 0px;
+                }
+            }
+        }
+        ul {
+            float: right;
+            list-style: none;
+            padding: 0px;
+            margin: 3px 30px 0px 0px;
+            li {
+                float: left;
+                opacity: 0;
+                opacity: 1\0;
+                &.active {
+                    a {
+                        @media #{$desktop} {
+                            -webkit-transform: scale(1.1);
+                            -moz-transform: scale(1.1);
+                            -ms-transform: scale(1.1);
+                            -o-transform: scale(1.1);
+                            transform: scale(1.1);
+                            &:after {
+                                content: '';
+                                position: absolute;
+                                bottom: -10px;
+                                left: 0;
+                                right: 0;
+                                margin: 0 auto;
+                                height: 5px;
+                                background: #8bb851;
+                                width: 80%;
+                            }
+                        }
+                    }
+                }
+                a {
+                    display: block;
+                    text-transform: uppercase;
+                    color: $navbar-co;
+                    padding: 10px;
+                    font-size: 16px;
+                    font-family: 'Oxygen-Regular';
+                    position: relative;
+                    -webkit-transition: all .3s;
+                    -moz-transition: all .3s;
+                    -ms-transition: all .3s;
+                    -o-transition: all .3s;
+                    transition: all .3s;
+                    &:hover {
+                        @media #{$desktop} {
+                            -webkit-transform: scale(1.1);
+                            -moz-transform: scale(1.1);
+                            -ms-transform: scale(1.1);
+                            -o-transform: scale(1.1);
+                            transform: scale(1.1);
+                        }
+                        &:after {
+                            height: 5px;
+                            background: #8bb851;
+                        }
+                    }
+                    &:after {
+                        @media #{$desktop} {
+                            content: '';
+                            position: absolute;
+                            bottom: -10px;
+                            left: 0;
+                            right: 0;
+                            margin: 0 auto;
+                            height: 0px;
+                            width: 80%;
+                            background: transparent;
+                            -webkit-transition: all ease 0.5s;
+                            -moz-transition: all ease 0.5s;
+                            transition: all ease 0.5s;
+                        } 
+                    }
+                    @media #{$mobile-y-tablet} {
+                        text-align: left;
+                    }
+                }
+                a:hover {
+                    span:last-of-type {
+                        display: block;
+                        width: 90%;
+                        height: 8px;
+                        background-color: $navbar-active;
+                        margin-left: auto;
+                        margin-right: auto;
+                        position: relative;
+                        top: 11.5px;
+                        @media #{$mobile-y-tablet} {
+                            display: none;
+                        }
+                    }
+                    @media #{$mobile-y-tablet} {
+                        border-left: 10px solid $navbar-active;
+                    }
+                }
+                a:focus,
+                a:visited,
+                a:hover {
+                    text-decoration: none;
+                }
+            }
+            li.active a {
+                @media #{$mobile-y-tablet} {
+                    border-left: 10px solid $navbar-active;
+                }
+                span:last-of-type {
+                    display: block;
+                    width: 90%;
+                    height: 8px;
+                    background-color: $navbar-active;
+                    margin-left: auto;
+                    margin-right: auto;
+                    position: relative;
+                    top: 11.5px;
+                    @media #{$mobile-y-tablet} {
+                        display: none;
+                    }
+                }
+            }
+            @media #{$mobile-y-tablet} {
+                margin: 0px 0px 0px;
+                background-color: $navbar-bg;
+                width: 100%;
+                height: 0px;
+                overflow: hidden;
+                transition: 0.5s;
+                li {
+                    float: initial;
+                    border-top: 1px solid $menu-mobile;
+                    text-align: center;
+                }
+            }
+        }
+        ul.open-menu {
+            @media #{$tablet} {
+                //margin-top: 12px;
+                margin-top: 10px;
+            }
+            @media #{$mobile-y-tablet} {
+                height: 165px;
+            }
+        }
+        .banco-en-linea {
+            float: right;
+            width: 200px;
+            text-align: right;
+            @media #{$tablet} {
+                padding-top: 10px;
+                padding-right: 15px;
+            }
+            @media #{$mobile} {
+                background-color: $menu-mobile;
+                width: 100%;
+                padding: 5px 0px;
+                text-align: center;
+                margin-top: -2px;
+            }
+            a{
+                position: relative;
+                top: 10px;
+                @media #{$mobile-y-tablet} {
+                    top: 0px;
+                }
+            }
+            a:hover,
+            a:focus,
+            a:visited {
+                color: $navbar-co;
+            }
+        }
+        .logo-banco {
+            float: left;
+            margin-top: 8px;
+            @media #{$tablet} {
+                padding-left: 60px;
+                padding-top: 8px;
+            }
+            @media #{$mobile} {
+                width: 100%;
+                text-align: center;
+                padding: 10px 0px;
+            }
+            img,
+            img:after,
+            img::after {
+                content: url($navbar-img-src);
+                @media #{$mobile} {
+                    max-width: 210px;
+                }
+            }
+        }
+    }
+    .menu-mobile {
+        img,
+        img:after,
+        img::after {
+            content: url($navbar-img-toggle-src);
+        }
+    }
+}

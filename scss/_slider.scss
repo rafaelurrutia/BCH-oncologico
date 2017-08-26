@@ -1,0 +1,85 @@
+.seccion {
+    display: inline-block;
+    width: 100%;
+}
+
+.carousel-inner {
+    .container-fluid {
+        padding: 0;
+        margin: 0;
+    }
+}
+
+.carousel-inner .owl-dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 0px;
+    @media screen and (max-width: 992px) {
+        bottom: 20px;
+    }
+    .owl-dot {
+        span {
+            width: 18px;
+            height: 18px;
+            background-color: $color-gris;
+            border: 1px solid $color-gris;
+        }
+        &.active {
+            span {
+                background-color: white;
+                border: 1px solid $color-gris;
+            }
+        }
+    }
+}
+
+.carousel-inner .owl-prev,
+.carousel-inner .owl-next {
+    position: absolute;
+    top: 35%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    display: block;
+    line-height: 50px;
+    text-indent: -9999999px;
+    background-color: transparent;
+    width: 108px;
+    height: 105px;
+    opacity: 0.62;
+    background: rgba(0, 0, 0, 0.9)!important;
+    -webkit-border-radius: 50%!important;
+    -moz-border-radius: 50%!important;
+    -ms-border-radius: 50%!important;
+    -o-border-radius: 50%!important;
+    border-radius: 50%!important;
+    @media screen and (max-width: 992px) {
+        background-size: 23px;
+    }
+}
+
+.carousel-inner .owl-prev {
+    left: -55px;
+    background-image: url(../img/arrow-prev.png)!important;
+    background-size: 11px 21px!important;
+    background-repeat: no-repeat!important;
+    background-position: 66px center !important;
+//    @media screen and (max-width: 992px) {
+//        left: 0px;
+//    }
+}
+
+.carousel-inner .owl-next {
+    right: -55px;
+    background-image: url(../img/arrow-next.png)!important;
+    background-size: 11px 21px!important;
+    background-repeat: no-repeat!important;
+    background-position: 33px center !important;
+//    @media screen and (max-width: 992px) {
+//        right: 0px;
+//    }
+}
